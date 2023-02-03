@@ -1,0 +1,38 @@
+{
+	"name": "raspberry-sense",
+	"version": "1.0.0",
+	"description": "raspberry-sense",
+	"main": "server.js",
+	"scripts": {
+		"dev": "nodemon -r dotenv/config server.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"_moduleAliases": {
+		"@config": "config",
+		"@lib": "lib",
+		"@routes": "routes",
+		"@utils": "utils"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lutzgraetz/raspberry-sense.git"
+	},
+	"keywords": [],
+	"author": "Lutz Graetz",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/lutzgraetz/raspberry-sense/issues"
+	},
+	"homepage": "https://github.com/lutzgraetz/raspberry-sense#readme",
+	"dependencies": {
+		"axios": "^1.2.6",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"module-alias": "^2.2.2"
+	},
+	"devDependencies": {
+		"dotenv": "^16.0.3",
+		"nodemon": "^2.0.20"
+	}
+}
