@@ -1,13 +1,13 @@
-require("dotenv").config();
+require('dotenv').config()
 
 module.exports = {
 	apps: [
 		{
-			name: "raspberry-sense",
-			script: "./server.js",
+			name: 'raspberry-sense',
+			script: './server.js',
 			env: {
 				...process.env,
 			},
 		},
 	],
-};
+}
