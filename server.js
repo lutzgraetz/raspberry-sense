@@ -18,9 +18,10 @@ app.get("/health", (req, res) => {
 	res.json({ success: true });
 });
 
-const senseRouter = require("@routes/generic.js");
+const senseRouter = require("@routes/sense.js");
 app.use("/sense", senseRouter);
 
-appDb.connectToServer((err) => {
-	app.listen(port, () => console.log(`raspberry-sense running at ${port}`));
+app.listen(port, () => {
+	console.log(process.env?.XXX);
+	console.log(`raspberry-sense running at ${port}`);
 });
