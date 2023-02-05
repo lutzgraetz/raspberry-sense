@@ -18,8 +18,13 @@ app.get('/health', (req, res) => {
 	res.json({ success: true })
 })
 
-const senseRouter = require('@routes/sense.js')
-app.use('/sense', senseRouter)
+const joystick = require('@routes/joystick.js')
+
+const ledsRouter = require('@routes/leds.js')
+app.use('/leds', ledsRouter)
+
+const imuRouter = require('@routes/imu.js')
+app.use('/imu', imuRouter)
 
 app.listen(port, () => {
 	console.log(process.env?.XXX)
