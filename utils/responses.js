@@ -1,5 +1,5 @@
-const generic = (status = null, message = '') => {
-	return { error: true, message: message || 's', status }
+const generic = (status = null, message = 'unknown error') => {
+	return { error: true, message: message, status }
 }
 
 module.exports = {

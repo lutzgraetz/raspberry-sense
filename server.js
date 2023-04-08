@@ -11,20 +11,18 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/', (req, res) => {
-	res.json({ success: true })
+	res.json({ success: true, message: 'Hello World!' })
 })
 
-app.get('/health', (req, res) => {
-	res.json({ success: true })
-})
+/* Sense Hat Module */
+require('@routes/sense-hat/joystick.js')
 
-const joystick = require('@routes/joystick.js')
+const ledsRouter = require('@routes/sense-hat/leds.js')
+app.use('/sense/leds', ledsRouter)
 
-const ledsRouter = require('@routes/leds.js')
-app.use('/leds', ledsRouter)
+const imuRouter = require('@routes/sense-hat/imu.js')
+app.use('/sense/imu', imuRouter)
 
-const imuRouter = require('@routes/imu.js')
-app.use('/imu', imuRouter)
 
 app.listen(port, () => {
 	console.log(process.env?.XXX)

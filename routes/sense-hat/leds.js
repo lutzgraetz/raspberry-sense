@@ -57,7 +57,7 @@ router.get('/text', async (req, res) => {
 })
 
 router.get('/image', async (req, res) => {
-	sense.loadImage('lion.png')
+	sense.loadImage('@static/lion.png')
 
 	res.json(responses.success())
 })
