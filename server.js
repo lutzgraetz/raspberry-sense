@@ -23,8 +23,9 @@ app.use('/sense/leds', ledsRouter)
 const imuRouter = require('@routes/sense-hat/imu.js')
 app.use('/sense/imu', imuRouter)
 
+/* Pixel Golf Game */
+require('@routes/pixel-golf.js')
 
 app.listen(port, () => {
-	console.log(process.env?.XXX)
 	console.log(`raspberry-sense running at ${port}`)
 })
